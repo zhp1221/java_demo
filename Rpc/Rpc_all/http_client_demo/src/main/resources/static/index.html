@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $("button").click(function () {
+                var json = '[{"name":"ss","sno":12},{"name":"qq","sno":22}]';
+                $.ajax({
+                    url:'http://localhost:8091/demo4',
+                    type:'post',
+                    success:function(data){
+                        alert(data);
+                        for(var i = 0 ;i<data.length;i++){
+
+                            alert(data[i].id +"  "+data[i].name);
+                        }
+                    },
+                    contentType:'application/json',//请求体中内容类型
+                    dataType:'json',//响应内容类型。
+                    data:json
+                });
+            })
+        })
+    </script>
+</head>
+<body>
+    <button>按钮</button>
+</body>
+</html>

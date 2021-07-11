@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1" width="500px" >
+    <tr>
+        <th>姓名</th>
+        <th>头像</th>
+    </tr>
+    <br/>
+    <tr th:each="emp:${emp}">
+        <td th:text="${emp.name}"></td>
+        <td ><img th:src="${emp.photo}"/></td>
+    </tr>
+</table>
+</body>
+</html>

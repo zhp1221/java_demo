@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhanghp.mapper.EmpMapper">
+<insert id="insertEmp" parameterType="emp">
+    insert into emp (name,photo,did) values (#{name},#{photo},#{did})
+</insert>
+    <select id="findEmpByDeptId" resultType="emp">
+        select * from emp where did = #{did}
+    </select>
+
+</mapper>

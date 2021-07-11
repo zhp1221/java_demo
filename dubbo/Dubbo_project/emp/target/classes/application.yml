@@ -1,0 +1,7 @@
+dubbo:
+  registry:
+    address: zookeeper://192.168.0.101:2181
+  application:
+    name: dubbo-emp
+server:
+  port: 8091
